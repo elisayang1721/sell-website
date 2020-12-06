@@ -46,6 +46,7 @@ module.exports = {
       alias: {
         '@as': '@/assets',
         '@c': '@/components',
+        '@com': '@/common',
         '@v': '@/views',
         '@img': '@/assets/img',
         '@css': '@/assets/css',
@@ -67,7 +68,7 @@ module.exports = {
   css: {
     loaderOptions: {
       scss: {
-        // prependData: '@import "@css/_variable.scss";'
+        prependData: '@import "@css/_variable.scss";'
       }
     }
   }

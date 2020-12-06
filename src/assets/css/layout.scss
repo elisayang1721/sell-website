@@ -1,0 +1,142 @@
+// html,
+// body {
+//   @include size(100%, 100%, null);
+
+//   position: relative;
+//   overflow: hidden;
+// }
+
+// #app,
+// #layout {
+//   @include size(100%, 100%, null);
+// }
+
+// #layout {
+//   background: #bdbace;
+// }
+
+// #header,
+// #tabNav {
+//   width: 100%;
+//   height: 50px;
+// }
+
+// #login {
+//   @include size(100%);
+//   @include Flex;
+//   position: relative;
+//   background-position: center;
+//   background-size: cover;
+//   background-image: url('https://picsum.photos/1920/1080');
+
+//   .weatherBlock {
+//     @include PosAbs;  
+//     width: 100%;
+//   }
+// }
+
+// #indexLayout {
+//   @include size(100%, 100%, null);
+//   @include Flex;
+
+//   background-color: #fff;
+  
+//   // 側邊選單
+//   .sideWrapper {
+//     height: 100%;  
+
+//     #sideBar {
+//       position: relative;
+//       overflow: visible;
+//       height: 100%;
+//       background-color: $primaryColor;
+//       z-index: 10;
+//       transition: all 0.2s;
+
+//       &[collapse='true'] {
+//         .sideBarLogo {
+//           .systemName {
+//             display: none;
+//           }
+//         }
+//       }
+
+//       .sideBarLogo {
+//         @include Flex(space-around);
+
+//         position: relative;
+//         height: 50px;
+//         background-color: $secondaryColor;
+//         color: #fff;
+
+//         > i {
+//           font-size: 22px;
+//           cursor: pointer;
+//           transition: all 0.3s;
+
+//           &[collapse='true'] {
+//             transform: rotate(180deg);
+//           }
+//         }
+//       }
+
+//       .menuList {
+//         height: calc(100% - 50px);
+        
+//         .el-menu {
+//           border-right: unset;
+//         }
+
+//         .menuGroup {
+//           text-align: left;
+          
+//           .el-menu-item-group__title {
+//             padding: 9px 0 9px 20px;
+//             font-size: 14px;
+//             color: #bbd4e6;
+//             background: #56537a;
+//             background: #382f55;
+//           }
+
+//           .el-menu-item {
+//             height: 45px;
+//             line-height: 45px;                    
+
+//             * {
+//               font-size: 16px; 
+//               color: #bdbace;
+//               vertical-align: unset;
+//             }
+
+//             &:hover,
+//             &.is-active {
+//               background: #ecf5ff;
+
+//               * {
+//                 color: $primaryColor;
+//               }
+//             }
+
+//             i {              
+//               width: 24px;
+//               margin-right: 5px;
+//             }
+//           }
+//         }
+
+//         .el-menu:not(.el-menu--collapse) {
+//           width: 200px;
+//           height: 100%;
+//           min-height: 100%;
+//           border-right: unset;
+//           background-color: unset;
+//         }
+//       }
+//     }
+//   }
+// }
+
+.mainView {
+  border: 1px solid green;
+  @include size(50px, 100px, null)
+}

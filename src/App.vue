@@ -1,32 +1,42 @@
 <template lang="pug">
   #app
-    .test
-      svgIcon(icon-class="close")
+    routerView
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+import axios from 'axios'
 
-  .test {
-    color: red;
-  }
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+  name: 'app',
+  mounted () {
+    // this.getProductOrder()
+  },
+  methods: {
+    getProductOrder () {
+      const test = require('./api/productOrder.json')
+      console.log(test)
+      // axios.get('/api/productOrder')
+      //   .then(res => {
+      //     console.log(res)
+      //   })
+    },
+    async testMock () {
+      const res = await axios({
+        url: '/test',
+        methods: 'get'
+      })
+      console.log(res.data)
+    },
+    async getStar () {
+      const res = await axios({
+        url: '/getData?type=123',
+        methods: 'get',
+        data: {
+          name: '123'
+        }
+      })
+      console.log(res.data)
     }
   }
 }
-</style>
+</script>
